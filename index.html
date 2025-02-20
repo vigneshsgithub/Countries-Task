@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Countries Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./Css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <i class="fas fa-globe-americas"></i>
+                <h1>World Explorer</h1>
+            </div>
+            <h2 class="horizon">Horizon</h2>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" class="search" placeholder="Search for a country...">
+            </div>
+            <div class="filter-wrapper">
+                <select class="filter">
+                    <option value="">Filter By Region</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="countries-grid">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
