@@ -1,5 +1,6 @@
+@use './global.scss' as rb;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-// styling for country details
+
 
 
 
@@ -10,28 +11,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --primary-color: #fff;
-    --accent-color: #e17055;
-    --background-color: #f5f6fa;
-    --card-background: #ffffff;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    --bg-color1: #212e37;
-    --bg-color2: rgba(33, 46, 55, 255);
-
-}
-
 body {
-    background: var(--bg-color1);
-    background: var(--bg-color2);
+    background: rb.$bg-color1;
+    background: rb.$bg-color2;
     min-height: 100vh;
 }
 
 .navbar {
     background: #2b3743;
     background: rgba(43, 55, 67, 255);
-    box-shadow: var(--shadow);
+    box-shadow: rb.$shadow;
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -56,17 +45,20 @@ body {
 
 .nav-left i {
     font-size: 1.8rem;
-    color: var(--accent-color);
+    color: rb.$accent-color;
 }
 
 .nav-left h1 {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: rb.$primary-colorr;
     font-weight: 600;
 }
 
+.anchor-tag{
+    text-decoration: none;
+}
 .horizon {
-    color: var(--accent-color);
+    color: rb.$accent-color;
     font-size: 2rem;
     font-weight: 700;
 }
@@ -91,7 +83,7 @@ body {
 .country-infoo {
     display: flex;
     flex-direction: row;
-    gap: 20rem;
+    gap: 38px;
 }
 
 .country-img {
@@ -112,7 +104,7 @@ body {
 .paratag{
     margin-bottom: 30px;
     margin-top: 20px;
-    margin-right: 40px;
+    margin-right: 60px;
 }
 
 
@@ -124,3 +116,89 @@ body {
 //     margin-left: 70rem
 // }
 
+@media (max-width: 1024px) {
+    .nav-content {
+        padding: 0 1rem;
+    }
+
+    .full-page {
+        padding: 2rem;
+    }
+
+    .country-infoo {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .nav-left {
+        justify-content: center;
+    }
+
+    .full-page {
+        padding: 2rem 1rem;
+    }
+
+    .country-detail {
+        width: 100%;
+    }
+
+    .country-img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    .nav-content {
+        width: 100%;
+        height: 50px;
+    }
+
+    .full-page {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .country-detail {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .country-infoo {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .country-img {
+        max-width: 300px;
+    }
+
+    .h-one {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .below-element {
+        width: 100%;
+    }
+}

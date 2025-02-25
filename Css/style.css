@@ -6,23 +6,15 @@
   font-family: "Poppins", sans-serif;
 }
 
-:root {
-  --primary-color: #2d3436;
-  --accent-color: #e17055;
-  --background-color: #f5f6fa;
-  --card-background: #ffffff;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
 body {
-  background-color: var(--background-color);
+  background-color: #f5f6fa;
   min-height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20L0 20z' fill='%239C92AC' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 .navbar {
-  background-color: var(--card-background);
-  box-shadow: var(--shadow);
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -46,17 +38,17 @@ body {
 
 .nav-left i {
   font-size: 1.8rem;
-  color: var(--accent-color);
+  color: #f17e19;
 }
 
 .nav-left h1 {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: #2d3436;
   font-weight: 600;
 }
 
 .horizon {
-  color: var(--accent-color);
+  color: #f17e19;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -69,10 +61,11 @@ body {
 
 .search-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   gap: 2rem;
   margin-bottom: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .search-wrapper {
@@ -84,7 +77,7 @@ body {
 .search-icon {
   position: absolute;
   left: 1rem;
-  top: 50%;
+  top: 27px;
   transform: translateY(-50%);
   color: #666;
 }
@@ -94,18 +87,19 @@ body {
   padding: 1rem 1rem 1rem 3rem;
   border: none;
   border-radius: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   transition: all 0.3s ease;
 }
 
 .search:focus {
   outline: none;
-  box-shadow: var(--hover-shadow);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .filter-wrapper {
   min-width: 200px;
+  max-width: 1140px;
 }
 
 .filter {
@@ -113,16 +107,84 @@ body {
   padding: 1rem;
   border: none;
   border-radius: 8px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
   cursor: pointer;
-  background-color: var(--card-background);
+  background-color: #ffffff;
   transition: all 0.3s ease;
+}
+
+.filter-btns {
+  border: none;
+  background-color: rgb(83, 83, 83);
+  color: white;
+  height: 55px;
+  width: 100%;
+  transition: all 0.1s ease;
+}
+
+.filter-btns:hover {
+  background-color: rgb(247, 240, 235);
+  color: black;
+}
+
+.filter-func {
+  display: none;
+}
+
+.filter-func.active {
+  display: block;
 }
 
 .filter:focus {
   outline: none;
-  box-shadow: var(--hover-shadow);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.sort-wrapper {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
+
+.sort {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.sort-btns {
+  border: none;
+  background-color: rgb(83, 83, 83);
+  color: white;
+  height: 55px;
+  width: 100%;
+  transition: all 0.1s ease;
+}
+
+.sort-btns:hover {
+  background-color: rgb(247, 240, 235);
+  color: black;
+}
+
+.sort-func {
+  display: none;
+}
+
+.sort-func.active {
+  display: block;
+}
+
+.sort:focus {
+  outline: none;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .countries-grid {
@@ -133,17 +195,17 @@ body {
 }
 
 .country-card {
-  background-color: var(--card-background);
+  background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .country-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--hover-shadow);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .country-flag {
@@ -161,7 +223,7 @@ body {
 .country-name {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: #2d3436;
   margin-bottom: 1rem;
 }
 
@@ -172,7 +234,7 @@ body {
 }
 
 .country-detail strong {
-  color: var(--primary-color);
+  color: #2d3436;
   font-weight: 500;
 }
 

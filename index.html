@@ -12,28 +12,38 @@
         <div class="nav-content">
             <div class="nav-left">
                 <i class="fas fa-globe-americas"></i>
-                <h1>World Explorer</h1>
+           <h1>World Explorer</h1>
             </div>
             <h2 class="horizon">Horizon</h2>
         </div>
     </nav>
 
-    <main class="main-container">
+    <main id="main" class="main-container">
+        
         <div class="search-container">
             <div class="search-wrapper">
                 <i class="fas fa-search search-icon"></i>
                 <input type="search" class="search" placeholder="Search for a country...">
             </div>
             <div class="filter-wrapper">
-                <select class="filter">
-                    <option value="">Filter By Region</option>
-                    <option value="Africa">Africa</option>
-                    <option value="Americas">Americas</option>
-                    <option value="Asia">Asia</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Oceania">Oceania</option>
-                </select>
+                <p class="filter filter-main">Filter By Region</p>
+              <div class="filter-func">
+                <button class="Africa filter-btns">Africa</button>
+                <button class="Americas filter-btns">Americas</button>
+                <button class="Asia filter-btns">Asia</button>
+                <button class="Europe filter-btns">Europe</button>
+                <button class="Oceania filter-btns">Oceania</button>
+              </div>
             </div>
+              <div class="sort-wrapper">
+                <p class="sort sort-main">Sort By</p>
+              <div class="sort-func">
+                <button class="Populationasc sort-btns">Population (Asc - Des)</button>
+                <button class="Populationdes sort-btns">Population (Des - Asc)</button>
+                <button class="Languageasc sort-btns">Language (Asc - Des)</button>
+                <button class="Languagedes sort-btns">Language (Des - Asc)</button>
+              </div>
+              </div>
         </div>
 
         <div class="countries-grid" >
